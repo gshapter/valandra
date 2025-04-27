@@ -49,14 +49,13 @@
   <div id="content">Loading world entries...</div>
 
   <script>
-    async function loadWorldReference() {
+async function loadWorldReference() {
   try {
     const baseUrl = 'https://xtmnfvokejjeclzldawo.functions.supabase.co/valandra-world?order=updated_at.desc';
     const response = await fetch(baseUrl);
     const entries = await response.json();
 
-    window.allEntries = entries; // store globally for easy filtering
-
+    window.allEntries = entries; // store entries globally for filtering
     renderEntries(entries);
   } catch (error) {
     console.error('Failed to load world data:', error);
@@ -87,7 +86,10 @@ function renderEntries(entries) {
   });
 }
 
-// Handle filter changes
+// Load all world entries immediately when page loads
+loadWorldReference();
+
+// Handle dropdown filter changes
 document.getElementById('category-filter').addEventListener('change', () => {
   const filter = document.getElementById('category-filter').value;
   if (!filter) {
@@ -97,6 +99,7 @@ document.getElementById('category-filter').addEventListener('change', () => {
     renderEntries(filtered);
   }
 });
-  </script>
+</script>
+
 </body>
 </html>

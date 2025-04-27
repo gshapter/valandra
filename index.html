@@ -83,9 +83,10 @@ function renderEntries(entries) {
     div.innerHTML = `
       <h2>${entry.name} <small style="font-weight: normal; color: gray;">(${entry.category})</small></h2>
       <h3>${entry.description}</h3>
-      <p><strong>Region:</strong> ${entry.region || 'Unknown'}</p>
-      <p><strong>Relative Direction:</strong> ${entry.relative_direction || 'Unknown'}</p>
-      <p><strong>Nearby Landmarks:</strong> ${entry.landmarks_nearby ? entry.landmarks_nearby.join(', ') : 'None listed'}</p>
+      <p><strong>Region:</strong> ${entry.region || '-'}</p>
+      <p><strong>House Allegiance:</strong> ${entry.house_allegiance || '-'}</p>
+      <p><strong>Relative Direction:</strong> ${entry.relative_direction || '-'}</p>
+      <p><strong>Nearby Landmarks:</strong> ${entry.landmarks_nearby ? entry.landmarks_nearby.join(', ') : '-'}</p>
     `;
     container.appendChild(div);
   });

@@ -1,0 +1,54 @@
+1. Introduction
+Valandra Adventure GPT (“we,” “us,” or “our”) is a custom ChatGPT designed to facilitate collaborative role-playing in the world of Valandra. This policy explains what information we collect when you use Valandra Adventure GPT, how we use it, and how you can exercise your privacy rights.
+
+2. Information We Collect
+2.1 Character & World Data
+Player-created content (character names, backgrounds, inventories, oaths, status, etc.) and world updates (new locations, NPCs, events) are stored persistently in our Supabase database.
+
+We use these records to restore continuity between sessions and to allow multiple users to see shared world changes.
+
+2.2 Usage Logs
+We record basic metadata about each GPT session (timestamps, which API calls were made) to monitor system health and debug errors.
+
+We do not collect or store personally identifying details (email, real names, IP addresses) beyond what you choose to include in your character data.
+
+2.3 Third-Party Services
+OpenAI processes your chat messages to generate responses. Their Privacy Policy applies to any data you submit to the model.
+
+Supabase stores game-related data on our behalf. Their Privacy Policy governs data at rest.
+
+3. How We Use Your Information
+Game continuity & collaboration. We retain your character and world data so the narrative can persist across sessions and across different user accounts.
+
+Debugging & performance. Usage logs help us identify and fix errors in the system.
+
+No marketing or profiling. We do not use your data for advertising, analytics beyond system health, or to profile you personally.
+
+4. Data Retention & Deletion
+Persistent game data remains stored until you or an administrator explicitly deletes it. If you ask us to remove your character data from the database, we will do so within 7 days.
+
+Usage logs are retained for up to 30 days to allow troubleshooting and then purged automatically.
+
+5. Security Measures
+We use HTTPS for all connections between ChatGPT, Supabase, and your browser.
+
+Supabase access is restricted by a Service Role Key stored in a secure environment variable.
+
+Only the minimum necessary permissions are granted: the GPT can only read/write the world_reference and characters tables.
+
+6. Your Rights
+Access: You may request a copy of any character or world data associated with your user identity.
+
+Correction: You may correct any inaccuracies in your character data.
+
+Deletion: You may request deletion of your character data; shared world entries you created may remain if they are part of collective story progress.
+
+Opt-out: You may opt out of logging beyond your own session by notifying the game administrator; this may limit support in diagnosing system issues.
+
+7. Changes to This Policy
+We may update this policy to reflect technical, legal, or procedural changes. The “Last updated” date at the top will indicate when the most recent revision occurred.
+
+8. Contact Us
+If you have questions or requests regarding this privacy policy or your data, please contact the project administrator at
+
+admin@valandra.example.com
